@@ -1,5 +1,6 @@
-package Tests;
+package Display;
 
+import Tests.*;
 import java.awt.BorderLayout;
 import javax.swing.JFrame;
 
