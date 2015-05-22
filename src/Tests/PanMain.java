@@ -7,8 +7,8 @@ public class PanMain extends JPanel {
     Cards cards = new Cards();
     public PanMain() {
         // this next line tells PanMain that it has a border layout.
-        
-        add(cards, BorderLayout.WEST);
+         setLayout(new BorderLayout());
+        add(cards, BorderLayout.CENTER);
         
     }
 }
