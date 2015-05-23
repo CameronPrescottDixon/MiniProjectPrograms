@@ -34,7 +34,9 @@ public class Cards extends JPanel {
             for (int j = 0; j < nColoms; j++) {
                 sprites[i] = bigImg.getSubimage((j * nWidth), (i * nHeight), nWidth, nHeight);
                 Graphics2D g2 = (Graphics2D) g;
-                g2.drawImage(sprites[i], null, j * nWidth, i * nHeight);
+//                g2.drawImage(sprites[i], null, j * nWidth, i * nHeight);
+                BufferedImage random = sprites[(int) (Math.random() * 52 + 1)];
+                g2.drawImage(random, null, 0, 0);
             }
         }
 //        for (int i = 0; i < 52; i++) {
@@ -42,5 +44,7 @@ public class Cards extends JPanel {
 //            g2.drawImage(sprites[i], null, 100,100 );
 //            
 //        }
+//        next section is to display a random card
+
     }
 }
