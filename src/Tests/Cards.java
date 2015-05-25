@@ -10,14 +10,12 @@ import javax.swing.JPanel;
 
 public class Cards extends JPanel {
 
-    private BufferedImage biSpriteSheet;
+    int nWidth, nHeight, nRows, nColoms;
+    BufferedImage[] sprites;
+    BufferedImage bigImg = null;
 
-    @Override
-    public void paint(Graphics g) {
-        Graphics2D g2 = (Graphics2D) g;
-        int nWidth, nHeight, nRows, nColoms, nRandomInt;
-        BufferedImage[] sprites;
-        BufferedImage bigImg = null;
+    public void SplitSprites() {
+
         try {
             bigImg = ImageIO.read(new File("PlayingCardsSpreadsheet.png"));
         } catch (IOException e) {
@@ -33,6 +31,12 @@ public class Cards extends JPanel {
                 //g2.drawImage(sprites[i], null, j * nWidth, i * nHeight); //Print sprites at I
             }
         }
+    }
+
+    @Override
+    public void paint(Graphics g) {
+        int nRandomInt;
+        Graphics2D g2 = (Graphics2D) g;
         nRandomInt = (int) (Math.random() * 51) + 1;
         g2.drawImage(sprites[nRandomInt], null, 100, 100);
         System.out.println(nRandomInt);
