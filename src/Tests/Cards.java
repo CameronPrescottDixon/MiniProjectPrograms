@@ -6,8 +6,6 @@ import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import java.awt.*;
-//import java.util.logging.Level;
-//import java.util.logging.Logger;
 import javax.swing.JPanel;
 
 public class Cards extends JPanel {
@@ -16,35 +14,27 @@ public class Cards extends JPanel {
 
     @Override
     public void paint(Graphics g) {
-        int nWidth, nHeight, nRows, nColoms;
+        Graphics2D g2 = (Graphics2D) g;
+        int nWidth, nHeight, nRows, nColoms, nRandomInt;
         BufferedImage[] sprites;
         BufferedImage bigImg = null;
         try {
             bigImg = ImageIO.read(new File("PlayingCardsSpreadsheet.png"));
         } catch (IOException e) {
-//            Logger.getLogger(Cards.class.getName()).log(Level.SEVERE, null, ex);
         }
         nWidth = 73;
         nHeight = 98;
         nRows = 4;
         nColoms = 13;
         sprites = new BufferedImage[nRows * nColoms];
-
-        for (int i = 0; i < nRows; i++) {
+        for (int i = 0; i < nRows; i++) { // split up sprite
             for (int j = 0; j < nColoms; j++) {
                 sprites[i] = bigImg.getSubimage((j * nWidth), (i * nHeight), nWidth, nHeight);
-                Graphics2D g2 = (Graphics2D) g;
-//                g2.drawImage(sprites[i], null, j * nWidth, i * nHeight);
-                BufferedImage random = sprites[(int) (Math.random() * 51 + 1)];
-                g2.drawImage(random, null, 0, 0);
+                //g2.drawImage(sprites[i], null, j * nWidth, i * nHeight); //Print sprites at I
             }
         }
-//        for (int i = 0; i < 52; i++) {
-//            Graphics2D g2 = (Graphics2D) g;
-//            g2.drawImage(sprites[i], null, 100,100 );
-//            
-//        }
-//        next section is to display a random card
-
+        nRandomInt = (int) (Math.random() * 51) + 1;
+        g2.drawImage(sprites[nRandomInt], null, 100, 100);
+        System.out.println(nRandomInt);
     }
 }
