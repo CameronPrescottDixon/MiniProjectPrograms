@@ -11,11 +11,10 @@ import javax.swing.JPanel;
 public class Cards extends JPanel {
 
     int nWidth, nHeight, nRows, nColoms;
-    BufferedImage[] sprites;
+    BufferedImage[] sprites=SplitSprites();
     BufferedImage bigImg = null;
 
-    public void SplitSprites() {
-
+    public BufferedImage[] SplitSprites() {
         try {
             bigImg = ImageIO.read(new File("PlayingCardsSpreadsheet.png"));
         } catch (IOException e) {
@@ -31,6 +30,8 @@ public class Cards extends JPanel {
                 //g2.drawImage(sprites[i], null, j * nWidth, i * nHeight); //Print sprites at I
             }
         }
+        return sprites;
+        
     }
 
     @Override
