@@ -1,4 +1,4 @@
-package Tests;
+package ButtonTest;
 import javax.swing.*;
 import java.awt.*;
 public class BtnStart extends JButton {

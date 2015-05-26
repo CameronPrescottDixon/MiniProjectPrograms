@@ -10,7 +10,7 @@ public class FraMain extends JFrame {
         Cards cards = new Cards();
         setTitle("WAR!!!");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(1000, 600); //1370, 730 for fullscreen for laptop
+        setSize((98*5), (73*5)); //1370, 730 for fullscreen for laptop
         this.setResizable(true);
         setLocationRelativeTo(null);
         add(panMain);

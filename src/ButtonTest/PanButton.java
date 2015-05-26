@@ -1,4 +1,4 @@
-package Tests;
+package ButtonTest;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -18,8 +18,6 @@ public class PanButton extends JPanel {
             @Override
             public void actionPerformed(ActionEvent event) {
                 bIsClicked = true;
-                //System.out.println("You clicked the button");
-                //btnStart = null;
             }
         }
         ActionListener sbListener = new SBListener();

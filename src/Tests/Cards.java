@@ -29,21 +29,17 @@ public class Cards extends JPanel {
         sprites = new BufferedImage[nRows * nColoms];
         for (int i = 0; i < nRows; i++) { // split up sprite
             for (int j = 0; j < nColoms; j++) {
-                sprites[i] = bigImg.getSubimage((j * nWidth), (i * nHeight), nWidth, nHeight);
-                //g2.drawImage(sprites[i], null, j * nWidth, i * nHeight); //Print sprites at I
+                sprites[(i * nColoms) + j] = bigImg.getSubimage((j * nWidth), (i * nHeight), nWidth, nHeight);
+               
             }
         }
-//        Arrays.asList(sprites);
-//        System.out.println(Arrays.asList(sprites)); //We have Problem spliting image
-        //For some reason the sprites array is only reciving the card on the end of each row (Kings)
         return sprites;
-        
     }
 
     @Override
     public void paint(Graphics g) {
         Graphics2D g2 = (Graphics2D) g;
-        g2.drawImage(sprites[4], null, 100, 100);
-        System.out.println(nRandomInt);
+        g2.drawImage(sprites[nRandomInt], null, 100, 100);
+        System.out.println(nRandomInt+1);
     }
 }
