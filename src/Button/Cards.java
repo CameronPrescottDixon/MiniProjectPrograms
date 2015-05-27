@@ -6,7 +6,6 @@ import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import javax.swing.JPanel;
 
 public class Cards extends JPanel {
@@ -15,7 +14,6 @@ public class Cards extends JPanel {
     BufferedImage[] sprites = SplitSprites();
     BufferedImage bigImg = null;
     int nRandomInt = Random();
-    
 
     public BufferedImage[] SplitSprites() {
         try {
@@ -43,7 +41,7 @@ public class Cards extends JPanel {
         g2.drawImage(sprites[nRandomInt], null, 100, 100);
         System.out.println(nRandomInt + 1);
     }
-    
+
     public int Random() {
         nRandomInt = (int) (Math.random() * 51) + 1;
         return nRandomInt;

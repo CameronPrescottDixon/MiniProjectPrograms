@@ -7,7 +7,6 @@ import java.awt.event.ActionListener;
 
 public class PanButton extends JPanel {
 
-    Boolean bIsClicked;
     JButton drawcard = new JButton("Draw!!");
 
     public PanButton() {
@@ -16,12 +15,9 @@ public class PanButton extends JPanel {
 
             @Override
             public void actionPerformed(ActionEvent event) {
-                bIsClicked = true;
-                if (bIsClicked == true) {
+                if (event.getSource() == drawcard) {
                     Cards cards = new Cards();
                     add(cards, BorderLayout.CENTER);
-                    revalidate();
-                    repaint();
                 }
             }
         }
