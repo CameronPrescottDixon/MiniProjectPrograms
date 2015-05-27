@@ -20,6 +20,8 @@ public class PanButton extends JPanel {
                 if (bIsClicked == true) {
                     Cards cards = new Cards();
                     add(cards, BorderLayout.CENTER);
+                    revalidate();
+                    repaint();
                 }
             }
         }
