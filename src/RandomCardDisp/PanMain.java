@@ -1,4 +1,4 @@
-package Tests;
+package RandomCardDisp;
 
 import javax.swing.*;
 import java.awt.*;

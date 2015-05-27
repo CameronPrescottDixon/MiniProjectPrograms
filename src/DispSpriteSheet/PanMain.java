@@ -1,7 +1,7 @@
 
-package Display;
+package DispSpriteSheet;
 
-import Tests.*;
+import DispSpriteSheet.*;
 import javax.swing.*;
 import java.awt.*;
 public class PanMain extends JPanel {

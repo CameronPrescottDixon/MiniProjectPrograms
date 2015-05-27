@@ -1,5 +1,5 @@
 
-package Display;
+package DispSpriteSheet;
 
 import java.io.FileNotFoundException;
 public class CardsDisplay {

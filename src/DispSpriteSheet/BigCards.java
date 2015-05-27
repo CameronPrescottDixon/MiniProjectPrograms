@@ -1,4 +1,4 @@
-package Display;
+package DispSpriteSheet;
 
 import javax.swing.*;
 import java.awt.*;

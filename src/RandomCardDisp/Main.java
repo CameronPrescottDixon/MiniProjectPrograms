@@ -1,4 +1,4 @@
-package Tests;
+package RandomCardDisp;
 
 import java.io.FileNotFoundException;
 

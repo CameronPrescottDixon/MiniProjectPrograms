@@ -1,4 +1,4 @@
-package Tests;
+package RandomCardDisp;
 
 import java.awt.BorderLayout;
 import javax.swing.JFrame;
