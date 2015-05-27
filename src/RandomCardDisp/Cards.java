@@ -18,8 +18,6 @@ public class Cards extends JPanel {
     //BufferedImage[] spritelocation = SplitSprites();
     BufferedImage bigImg = null;
     int nRandomInt = (int) (Math.random() * 51) + 1;
-    //int aAllCards[] = new int [53];
-    //int nArraySize = 53;
     ArrayList<int[]> aliP1Cards=new ArrayList<>();
     ArrayList<int[]> aliAICards=new ArrayList<>();
     ArrayList<int[]> aliAllCards=new ArrayList<>();
