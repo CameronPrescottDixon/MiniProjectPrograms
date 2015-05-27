@@ -1,6 +1,6 @@
-package ButtonTest;
+package Button;
 
-import Tests.*;
+import Button.*;
 import javax.swing.*;
 import java.awt.*;
 

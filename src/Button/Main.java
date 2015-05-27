@@ -1,4 +1,4 @@
-package ButtonTest;
+package Button;
 
 import java.awt.*;
 import java.io.FileNotFoundException;

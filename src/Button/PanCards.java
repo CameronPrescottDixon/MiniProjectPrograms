@@ -1,5 +1,5 @@
 
-package ButtonTest;
+package Button;
 
 public class PanCards {
     

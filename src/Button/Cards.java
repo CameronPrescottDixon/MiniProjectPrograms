@@ -1,4 +1,4 @@
-package ButtonTest;
+package Button;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
