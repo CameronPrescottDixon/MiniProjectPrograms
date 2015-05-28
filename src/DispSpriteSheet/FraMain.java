@@ -8,7 +8,6 @@ public class FraMain extends JFrame {
 
     FraMain() {
         PanMain panMain = new PanMain();
-        BigCards cards = new BigCards();
         setTitle("The Cards");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(1000, 600); //1370, 730 for fullscreen for laptop
