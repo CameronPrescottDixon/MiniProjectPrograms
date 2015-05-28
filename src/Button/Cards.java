@@ -1,24 +1,17 @@
 package Button;
 
-import java.awt.*;
-import java.io.File;
-import java.io.IOException;
-import javax.imageio.ImageIO;
-import javax.swing.JPanel;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class Cards extends JPanel {
+public class Cards extends JButton {
 
-    private Image Icon = null;
-    String sImage = "PlayingCardsSpreadsheet.png";
+    private ImageIcon icon;
 
-    @Override
-    public void paint(Graphics g) {
-        try {
-            Icon = ImageIO.read(new File("PlayingCardsSpreadsheet.png"));
-        } catch (IOException e) {
-        }
-        Graphics2D g2 = (Graphics2D) g;
-        g2.drawImage(Icon, 0, 0, 950, 392, this);
-        System.out.println();
+    Cards(String file) {
+        icon = new ImageIcon(file);
+        icon.getImage();
+        this.setIcon(icon);
     }
 }
