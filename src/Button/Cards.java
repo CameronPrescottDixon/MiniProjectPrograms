@@ -15,8 +15,7 @@ public class Cards extends JButton {
     Cards(String file) {
         icon = new ImageIcon(file);
         icon.getImage();
-       
-        tay = new ImageIcon("TayTay.jpg");
+        tay = new ImageIcon("url.jpg");
         tay.getImage();
         this.setIcon(icon);
         AL changeImage = new AL();
