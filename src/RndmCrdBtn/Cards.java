@@ -54,17 +54,10 @@ public class Cards extends JButton {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            if (bToggle == true) {
                 random = Random();
                 icon = new ImageIcon(sprites[random]);
                 setIcon(icon);
-                bToggle = false;
-            } else {
-                random = Random();
-                tay = new ImageIcon(sprites[random]);
-                setIcon(tay);
-                bToggle = true;
-            }
+                bToggle = false;  
         }
     }
 
