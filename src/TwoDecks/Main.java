@@ -1,5 +1,6 @@
-package RndmCrdBtn;
+package TwoDecks;
 
+import RndmCrdBtn.*;
 import Button.*;
 import java.awt.*;
 import java.io.FileNotFoundException;
