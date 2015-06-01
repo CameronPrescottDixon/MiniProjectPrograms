@@ -58,7 +58,7 @@ public class Cards extends JButton {
         @Override
         public void actionPerformed(ActionEvent e) {
                 random = Random();
-                int nP1CardValue = ShuffleDisp();
+                //int nP1CardValue = ShuffleDisp();
                 //random = (int) (Math.random() * 51) + 1;
                 icon = new ImageIcon(sprites[random]);
                 setIcon(icon);
@@ -77,7 +77,7 @@ public class Cards extends JButton {
         }
         return alP1Cards;
     }
-    public int ShuffleDisp(ArrayList alP1Cards){
-        for(int )
-    }
+   // public int ShuffleDisp(ArrayList alP1Cards){
+        //for(int )
+   // }
 }
