@@ -11,6 +11,7 @@ import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import javax.imageio.ImageIO;
 
 public class Cards extends JButton {
@@ -22,7 +23,9 @@ public class Cards extends JButton {
     int nWidth, nHeight, nRows, nColoms;
     BufferedImage[] sprites = SplitSprites();
     BufferedImage bigImg = null;
-
+    ArrayList<int[]> arP1Cards=new ArrayList<int[]>();
+    ArrayList<int[]> arP2Cards=new ArrayList<int[]>();
+    
     public BufferedImage[] SplitSprites() {
         try {
             bigImg = ImageIO.read(new File("PlayingCardsSpreadsheet.png"));
@@ -45,8 +48,6 @@ public class Cards extends JButton {
     Cards(String file) {
         icon = new ImageIcon(file);
         icon.getImage();
-        tay = new ImageIcon(sprites[random]);
-        tay.getImage();
         this.setIcon(icon);
         AL changeImage = new AL();
         this.addActionListener(changeImage);
@@ -56,22 +57,27 @@ public class Cards extends JButton {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            if (bToggle == true) {
                 random = Random();
+                int nP1CardValue = ShuffleDisp();
+                //random = (int) (Math.random() * 51) + 1;
                 icon = new ImageIcon(sprites[random]);
                 setIcon(icon);
-                bToggle = false;
-            } else {
-                random = Random();
-                tay = new ImageIcon(sprites[random]);
-                setIcon(tay);
-                bToggle = true;
-            }
         }
     }
 
     public int Random() {
         int nRandomInt = (int) (Math.random() * 51) + 1;
         return nRandomInt;
+    }
+    public ArrayList Shuffle(BufferedImage sprites[], ArrayList alP1Cards){
+        for(int i = 0; i< 25; i++){
+            random = Random();
+            //random = (int) (Math.random() * 51) + 1;
+            alP1Cards.add(random);
+        }
+        return alP1Cards;
+    }
+    public int ShuffleDisp(ArrayList alP1Cards){
+        for(int )
     }
 }
