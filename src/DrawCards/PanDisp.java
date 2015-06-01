@@ -1,5 +1,6 @@
-package RndmCrdBtn;
+package DrawCards;
 
+import RndmCrdBtn.*;
 import Button.*;
 import javax.swing.*;
 import java.awt.*;

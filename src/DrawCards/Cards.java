@@ -1,4 +1,4 @@
-package TwoDecks;
+package DrawCards;
 
 import RndmCrdBtn.*;
 import Button.*;
@@ -17,7 +17,7 @@ public class Cards extends JButton {
     private ImageIcon icon;
     private ImageIcon tay;
     boolean bToggle = false;
-    int random=Random();
+    int random;
     int nWidth, nHeight, nRows, nColoms;
     BufferedImage[] sprites = SplitSprites();
     BufferedImage bigImg = null;
@@ -41,13 +41,14 @@ public class Cards extends JButton {
         return sprites;
     }
 
-    Cards() {
-        icon = new ImageIcon(sprites[random]);
+    Cards(String file) {
+        icon = new ImageIcon(file);
         icon.getImage();
+        tay = new ImageIcon(sprites[random]);
+        tay.getImage();
         this.setIcon(icon);
         AL changeImage = new AL();
         this.addActionListener(changeImage);
-
     }
 
     class AL implements ActionListener {
@@ -57,11 +58,12 @@ public class Cards extends JButton {
                 random = Random();
                 icon = new ImageIcon(sprites[random]);
                 setIcon(icon);
+                bToggle = false;  
         }
     }
 
     public int Random() {
-        int nRandomInt = (int) (Math.random() * 26) ;
+        int nRandomInt = (int) (Math.random() * 51) + 1;
         return nRandomInt;
     }
 }

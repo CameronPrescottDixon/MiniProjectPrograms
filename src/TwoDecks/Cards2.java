@@ -12,7 +12,7 @@ import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 
-public class Cards extends JButton {
+public class Cards2 extends JButton {
 
     private ImageIcon icon;
     private ImageIcon tay;
@@ -21,6 +21,8 @@ public class Cards extends JButton {
     int nWidth, nHeight, nRows, nColoms;
     BufferedImage[] sprites = SplitSprites();
     BufferedImage bigImg = null;
+    int Array1[]=new int [26];
+    int Array2[]=new int [26];
 
     public BufferedImage[] SplitSprites() {
         try {
@@ -41,7 +43,7 @@ public class Cards extends JButton {
         return sprites;
     }
 
-    Cards() {
+    Cards2() {
         icon = new ImageIcon(sprites[random]);
         icon.getImage();
         this.setIcon(icon);
@@ -61,7 +63,7 @@ public class Cards extends JButton {
     }
 
     public int Random() {
-        int nRandomInt = (int) (Math.random() * 26) ;
+        int nRandomInt = (int) (Math.random() * 26) + 26;
         return nRandomInt;
     }
 }
