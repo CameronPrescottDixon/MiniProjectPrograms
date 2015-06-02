@@ -1,4 +1,4 @@
-package SetValues;
+package ArrayLists;
 
 import TwoDecks.*;
 import RndmCrdBtn.*;
@@ -20,6 +20,8 @@ public class PanDisp extends JPanel {
         add(btnCards, BorderLayout.WEST);
         add(btnCards2, BorderLayout.EAST);
         add(draw, BorderLayout.SOUTH);
+        btnCards.Cards();
+        btnCards2.Cards();
         evtDraw eD = new evtDraw(); // the event class will be defined later
         draw.addActionListener(eD);
     }

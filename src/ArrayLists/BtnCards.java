@@ -1,4 +1,4 @@
-package SetValues;
+package ArrayLists;
 
 import TwoDecks.*;
 import RndmCrdBtn.*;
@@ -39,10 +39,16 @@ public class BtnCards extends JButton {
         return sprites;
     }
 
+    public void Cards() {
+        icon = new ImageIcon("card_back.png");
+        icon.getImage();
 
+        this.setIcon(icon);
 
-    public void Random( int nAdd) {
-        int nRandomInt = (int) (Math.random() * 26)+nAdd;
+    }
+
+    public void Random(int nAdd) {
+        int nRandomInt = (int) (Math.random() * 26) + nAdd;
         icon = new ImageIcon(sprites[nRandomInt]);
         setIcon(icon);
 
