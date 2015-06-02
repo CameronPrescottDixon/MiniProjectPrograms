@@ -1,5 +1,5 @@
 
-package CardArray;
+package SetValues;
 
 import TwoDecks.*;
 import RndmCrdBtn.*;

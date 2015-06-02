@@ -1,5 +1,6 @@
-package TwoDecks;
+package SetValues;
 
+import TwoDecks.*;
 import RndmCrdBtn.*;
 import Button.*;
 import java.awt.Color;
@@ -12,12 +13,9 @@ import java.io.File;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 
-public class Cards extends JButton {
+public class BtnCards extends JButton {
 
     private ImageIcon icon;
-    private ImageIcon tay;
-    boolean bToggle = false;
-    int random=Random();
     int nWidth, nHeight, nRows, nColoms;
     BufferedImage[] sprites = SplitSprites();
     BufferedImage bigImg = null;
@@ -41,27 +39,12 @@ public class Cards extends JButton {
         return sprites;
     }
 
-    Cards() {
-        icon = new ImageIcon(sprites[random]);
-        icon.getImage();
-        this.setIcon(icon);
-        AL changeImage = new AL();
-        this.addActionListener(changeImage);
 
-    }
 
-    class AL implements ActionListener {
+    public void Random( int nAdd) {
+        int nRandomInt = (int) (Math.random() * 26)+nAdd;
+        icon = new ImageIcon(sprites[nRandomInt]);
+        setIcon(icon);
 
-        @Override
-        public void actionPerformed(ActionEvent e) {
-                random = Random();
-                icon = new ImageIcon(sprites[random]);
-                setIcon(icon);
-        }
-    }
-
-    public int Random() {
-        int nRandomInt = (int) (Math.random() * 26) ;
-        return nRandomInt;
     }
 }

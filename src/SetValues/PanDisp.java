@@ -1,5 +1,6 @@
-package TwoDecks;
+package SetValues;
 
+import TwoDecks.*;
 import RndmCrdBtn.*;
 import Button.*;
 import javax.swing.*;
