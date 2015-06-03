@@ -1,20 +1,23 @@
 package Shuffle;
 
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
+import javax.swing.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
+import java.util.*;
 import javax.imageio.ImageIO;
 
 public class BtnCards extends JButton {
 
     private ImageIcon icon;
-    int nWidth, nHeight, nRows, nColoms;
     BufferedImage[] abiCards = SplitSprites();
     BufferedImage bigImg = null;
+    static ArrayList<Integer> alnShuffle = new ArrayList<Integer>();
+    ArrayList<Integer> alnCards = new ArrayList<Integer>();
+    ArrayList<Integer> alnHand1 = new ArrayList<Integer>();
+    ArrayList<Integer> alnHand2 = new ArrayList<Integer>();
 
     public BufferedImage[] SplitSprites() {
+        int nWidth, nHeight, nRows, nColoms;
         try {
             bigImg = ImageIO.read(new File("PlayingCardsSpreadsheet.png"));
         } catch (IOException e) {
@@ -40,9 +43,28 @@ public class BtnCards extends JButton {
 
     }
 
-    public void RandomCard() {
+    public void Hand() {
+        for (int i = 0; i < 52; i++) {
+            alnCards.add(i);
+        }
+        alnShuffle = Shuffle(alnCards);
+        for (int i = 0; i < 26; i++) {
+            alnHand1.add(alnShuffle.get(i));
+            alnShuffle.remove(i);
+        }
+        for (int i = 26; i < 52; i++) {
+            alnHand2.add(alnShuffle.get(i));
+            alnShuffle.remove(i);
+        }
     }
 
-    public static void Shuffle(Object[] array) {
+    public static ArrayList Shuffle(ArrayList alnCards) {
+        int nRand;
+        for (int i = 0; i < alnCards.size(); i++) {
+            nRand = (int) (Math.random() * alnCards.size());
+            alnShuffle.add((Integer) alnCards.get(nRand));
+            alnCards.remove(nRand);
+        }
+        return alnShuffle;
     }
 }
