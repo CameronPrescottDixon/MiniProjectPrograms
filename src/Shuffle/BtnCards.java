@@ -46,10 +46,10 @@ public class BtnCards extends JButton {
 
     }
 
-    public void RandomCard(int nSplitPoint) {
+    public void RandomCard(int nStartPoint,int nEndPoint) {
 //        int nRandomInt = (int) (Math.random() * 26) + nAdd;
         BtnCards.Shuffle(sprites);
-        for(int i=0;i+ nSplitPoint<sprites.length;i++)
+        for(int i=0;i+ nStartPoint<sprites.length-nEndPoint;i++)
         icon = new ImageIcon(sprites[i]);
         setIcon(icon);
 

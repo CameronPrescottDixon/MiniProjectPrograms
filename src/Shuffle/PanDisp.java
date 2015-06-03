@@ -29,8 +29,8 @@ public class PanDisp extends JPanel {
     public class evtDraw implements ActionListener { // must override the ActionPerformed method
 
         public void actionPerformed(ActionEvent e) {
-            btnCards.RandomCard(0);
-            btnCards2.RandomCard( 26);
+            btnCards.RandomCard(0,26);
+            btnCards2.RandomCard( 26,0);
         }
     }
 }
