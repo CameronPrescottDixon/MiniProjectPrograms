@@ -1,13 +1,7 @@
 package Shuffle;
 
-import TwoDecks.*;
-import RndmCrdBtn.*;
-import Button.*;
-import java.awt.Color;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -17,7 +11,7 @@ public class BtnCards extends JButton {
 
     private ImageIcon icon;
     int nWidth, nHeight, nRows, nColoms;
-    BufferedImage[] sprites = SplitSprites();
+    BufferedImage[] abiCards = SplitSprites();
     BufferedImage bigImg = null;
 
     public BufferedImage[] SplitSprites() {
@@ -30,13 +24,13 @@ public class BtnCards extends JButton {
         nHeight = 98;
         nRows = 4;
         nColoms = 13;
-        sprites = new BufferedImage[nRows * nColoms];
+        abiCards = new BufferedImage[nRows * nColoms];
         for (int i = 0; i < nRows; i++) { // split up sprite
             for (int j = 0; j < nColoms; j++) {
-                sprites[(i * nColoms) + j] = bigImg.getSubimage((j * nWidth), (i * nHeight), nWidth, nHeight);
+                abiCards[(i * nColoms) + j] = bigImg.getSubimage((j * nWidth), (i * nHeight), nWidth, nHeight);
             }
         }
-        return sprites;
+        return abiCards;
     }
 
     public void StartingCard() {
@@ -46,21 +40,9 @@ public class BtnCards extends JButton {
 
     }
 
-    public void RandomCard(int nStartPoint,int nEndPoint) {
-//        int nRandomInt = (int) (Math.random() * 26) + nAdd;
-        BtnCards.Shuffle(sprites);
-        for(int i=0;i+ nStartPoint<sprites.length-nEndPoint;i++)
-        icon = new ImageIcon(sprites[i]);
-        setIcon(icon);
-
+    public void RandomCard() {
     }
-    public static void Shuffle(Object[] array){
-        int nSize= array.length;
-        for(int i=0;i<nSize;i++){
-            int nShuffle= i + (int)(Math.random()*nSize-i);
-            Object temp=array[nShuffle];
-            array[nShuffle]= array[i];
-            array[i]=temp;
-        }
+
+    public static void Shuffle(Object[] array) {
     }
 }

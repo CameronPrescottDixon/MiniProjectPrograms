@@ -1,9 +1,5 @@
 package Shuffle;
 
-import TwoDecks.*;
-import RndmCrdBtn.*;
-import Button.*;
-import java.awt.*;
 import java.io.FileNotFoundException;
 
 public class Main {

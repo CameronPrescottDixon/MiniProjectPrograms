@@ -1,8 +1,5 @@
 package Shuffle;
 
-import TwoDecks.*;
-import RndmCrdBtn.*;
-import Button.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -15,7 +12,6 @@ public class PanDisp extends JPanel {
 
     public PanDisp(PanOut _panOut) {
         setLayout(new BorderLayout());
-
         BtnDraw draw = new BtnDraw("Draw!!!");
         add(btnCards, BorderLayout.WEST);
         add(btnCards2, BorderLayout.EAST);
@@ -29,8 +25,7 @@ public class PanDisp extends JPanel {
     public class evtDraw implements ActionListener { // must override the ActionPerformed method
 
         public void actionPerformed(ActionEvent e) {
-            btnCards.RandomCard(0,26);
-            btnCards2.RandomCard( 26,0);
+         
         }
     }
 }
