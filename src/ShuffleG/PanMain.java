@@ -1,5 +1,5 @@
 
-package Shuffle;
+package ShuffleG;
 
 import java.awt.*;
 import javax.swing.*;

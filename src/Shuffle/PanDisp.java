@@ -25,7 +25,6 @@ public class PanDisp extends JPanel {
     public class evtDraw implements ActionListener { // must override the ActionPerformed method
 
         public void actionPerformed(ActionEvent e) {
-         
         }
     }
 }
