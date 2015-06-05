@@ -1,12 +1,11 @@
 package ShuffleLuke_1;
 
 import java.util.ArrayList;
-import javax.swing.ImageIcon;
 
 public class Hand {
 
-    ArrayList<Integer> alnShuffle = new ArrayList<Integer>();
-    ArrayList<Integer> alnCards = new ArrayList<Integer>();
+    ArrayList<Integer> alnShuffle = new ArrayList<Integer>(); //ArrayList of all 52 integers of cards, shuffled randomly
+    ArrayList<Integer> alnCards = new ArrayList<Integer>();//ArrayList of all 52 integers of cards, in order
     ArrayList<Integer> alnHand1 = new ArrayList<Integer>();
     ArrayList<Integer> alnHand2 = new ArrayList<Integer>();
 

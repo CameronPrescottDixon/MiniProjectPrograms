@@ -1,6 +1,5 @@
 package ShuffleLuke_1;
 
-import java.util.ArrayList;
 import javax.swing.*;
 
 public class LblCardsRemaining extends JLabel {
