@@ -34,7 +34,7 @@ public class PanDisp extends JPanel {
             if (CardP1>CardP2){
                 hand.alnHand1.add(CardP2);
                 hand.alnHand2.remove(CardP2);
-            }
+            } 
             else if (CardP1<CardP2){
                 hand.alnHand2.add(CardP1);
                 hand.alnHand1.remove(CardP1);

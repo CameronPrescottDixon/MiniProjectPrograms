@@ -17,7 +17,7 @@ public class LblCards extends JLabel {
 
  public int DrawCard(ArrayList<Integer> alnCards,int nCardtoDraw){
         int nCard;
-        nCard= alnCards.get(nCardtoDraw);
+        nCard= alnCards.get(nCardtoDraw); 
         icon = new ImageIcon(deck.abiCards[nCardtoDraw]);
         setIcon(icon);
         
