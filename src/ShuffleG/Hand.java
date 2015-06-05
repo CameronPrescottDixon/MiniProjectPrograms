@@ -14,6 +14,9 @@ public class Hand {
         for (int i = 0; i < 52; i++) {
             alnCards.add(i);
         }
+        for (int value : alnCards) {
+	    System.out.println(value);
+	}
         alnShuffle = Deck.Shuffle(alnCards, alnShuffle);
         if (nNum == 1) { //If it's the first hand of cards only take this hand
             for (int i = 0; i < 26; i++) {

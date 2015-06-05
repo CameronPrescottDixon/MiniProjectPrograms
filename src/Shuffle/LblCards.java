@@ -1,5 +1,6 @@
 package Shuffle;
 
+import java.util.ArrayList;
 import javax.swing.*;
 
 public class LblCards extends JLabel {
@@ -10,6 +11,17 @@ public class LblCards extends JLabel {
         icon = new ImageIcon("card_back.png");
         icon.getImage();
         this.setIcon(icon);
+    }
+    
+    Deck deck=new Deck();
+
+ public int DrawCard(ArrayList<Integer> alnCards,int nCardtoDraw){
+        int nCard;
+        nCard= alnCards.get(nCardtoDraw);
+        icon = new ImageIcon(deck.abiCards[nCardtoDraw]);
+        setIcon(icon);
+        
+        return nCard;
     }
 }
 

@@ -9,6 +9,8 @@ public class PanDisp extends JPanel {
 
     LblCards lblCards = new LblCards();
     LblCards lblCards2 = new LblCards();
+    Hand hand=new Hand();
+    int Player1= hand.alnHand1.size(),Player2=hand.alnHand2.size();
     
 
     public PanDisp(PanOut _panOut) {
@@ -27,6 +29,17 @@ public class PanDisp extends JPanel {
 
         @Override
         public void actionPerformed(ActionEvent e) {
+            int CardP1,CardP2,nCount=26;
+            CardP1=lblCards.DrawCard(hand.alnHand1,nCount);
+            CardP2=lblCards.DrawCard(hand.alnHand2,nCount);
+            nCount--;
+            if (CardP1>CardP2){
+                hand.alnHand1.add(CardP2);
+                hand.alnHand2.remove(CardP2);
+            }
+            else if (CardP1<CardP2){
+                hand.alnHand2.add(CardP1);
+                hand.alnHand1.remove(CardP1);
         }
     }
 }
