@@ -1,4 +1,4 @@
-package ShuffleLuke_1;
+package Shuffle;
 
 import javax.swing.*;
 

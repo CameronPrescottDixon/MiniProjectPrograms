@@ -1,6 +1,5 @@
-package DispSpriteSheet;
+package OneDispSpriteSheet;
 
-import DispSpriteSheet.*;
 import java.awt.BorderLayout;
 import javax.swing.JFrame;
 

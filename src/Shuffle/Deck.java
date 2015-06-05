@@ -3,42 +3,31 @@ package Shuffle;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import javax.imageio.ImageIO;
 
 public class Deck {
 
-    BufferedImage[] abiCards = SplitSprites();
+    BufferedImage[] abiCards = SplitSprites(); //Array of BufferedImages
     BufferedImage bigImg = null;
-    int nWidth, nHeight, nRows, nColoms;
+    int nWidth, nHeight, nRows, nColumns;
 
-     public BufferedImage[] SplitSprites() {//Split the spritesheet into an array of images
-        int nWidth, nHeight, nRows, nColoms;
+    public BufferedImage[] SplitSprites() {//Split the spritesheet into an array of images
+        int nWidth, nHeight, nRows, nColumns;
         try {
-            bigImg = ImageIO.read(new File("PlayingCardsSpreadsheet.png"));
+            bigImg = ImageIO.read(new File("PlayingCardsSpreadsheet.png")); //Read in the entire SpriteSheet
         } catch (IOException e) {
-            e.getCause();
+            e.printStackTrace();
         }
-        nWidth = 73;
-        nHeight = 98;
-        nRows = 4;
-        nColoms = 13;
-        abiCards = new BufferedImage[nRows * nColoms];
+        nWidth = 73; //Width of one card
+        nHeight = 98; //Height of one card
+        nRows = 4; //Number of rows in the SpriteSheet
+        nColumns = 13; //Number of columns in the Spritesheet
+        abiCards = new BufferedImage[nRows * nColumns];
         for (int i = 0; i < nRows; i++) { // split up sprite
-            for (int j = 0; j < nColoms; j++) {
-                abiCards[(i * nColoms) + j] = bigImg.getSubimage((j * nWidth), (i * nHeight), nWidth, nHeight);
+            for (int j = 0; j < nColumns; j++) {
+                abiCards[(i * nColumns) + j] = bigImg.getSubimage((j * nWidth), (i * nHeight), nWidth, nHeight); //Split up the SpriteSheet into smaller cards, and adding them into an array of Buffered Images
             }
         }
         return abiCards;
     }
-     public static ArrayList Shuffle(ArrayList alnCards, ArrayList alnShuffle) {
-        int nRand; //Shuffle the array of cards into alnShuffle
-        for (int i = 0; i < alnCards.size(); i++) {
-            nRand = (int) (Math.random() * alnCards.size());
-            alnShuffle.add((Integer) alnCards.get(nRand));
-            alnCards.remove(nRand);
-        }
-        return alnShuffle;
-    }
 }
-
