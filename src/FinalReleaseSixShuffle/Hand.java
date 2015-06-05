@@ -23,14 +23,14 @@ public class Hand {
 
     public ArrayList<Integer> Hand1() {
         for (int i = 0; i < 26; i++) {//Loop 26 times to add 26 cards
-            alnHand1.add(alnCards.get(i)); //Add 26 of the cards from the shuffled ArrayList of cards (alnCards) into Player 1's ArrayList of cards, alnHand1
+            alnHand1.add(alnShuffle.get(i)); //Add 26 of the cards from the shuffled ArrayList of cards (alnCards) into Player 1's ArrayList of cards, alnHand1
         }
         return alnHand1;
     }
 
     public ArrayList<Integer> Hand2() {
         for (int i = 26; i < 52; i++) {//Loop 26 times to add 26 cards
-            alnHand2.add(alnCards.get(i)); //Add 26 of the cards from the shuffled ArrayList of cards (alnCards) into Player 2's ArrayList of cards, alnHand2
+            alnHand2.add(alnShuffle.get(i)); //Add 26 of the cards from the shuffled ArrayList of cards (alnCards) into Player 2's ArrayList of cards, alnHand2
         }
         return alnHand1;
     }
