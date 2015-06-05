@@ -19,7 +19,7 @@ public class Hand {
             for (int i = 0; i < 26; i++) {
                 alnHand1.add(alnShuffle.get(i));
                 alnShuffle.remove(i);
-            }
+        } 
 
         } else { //If it's the second hand of cards only take this hand
             for (int i = 26; i < 52; i++) {

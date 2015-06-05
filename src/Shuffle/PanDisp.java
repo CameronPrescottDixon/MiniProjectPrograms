@@ -9,10 +9,8 @@ public class PanDisp extends JPanel {
 
     LblCards lblCards = new LblCards();
     LblCards lblCards2 = new LblCards();
-    Hand hand=new Hand();
-    int Player1= hand.alnHand1.size(),Player2=hand.alnHand2.size();
-    
-
+    Hand hand = new Hand();
+    int Player1 = hand.alnHand1.size(), Player2 = hand.alnHand2.size();
     public PanDisp(PanOut _panOut) {
         setLayout(new BorderLayout());
         BtnDraw draw = new BtnDraw("Draw!!!");
@@ -40,6 +38,7 @@ public class PanDisp extends JPanel {
             else if (CardP1<CardP2){
                 hand.alnHand2.add(CardP1);
                 hand.alnHand1.remove(CardP1);
+            }
         }
     }
 }
