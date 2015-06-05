@@ -36,7 +36,7 @@ public class PanDisp extends JPanel {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            int Player1 = hand.alnHand1.size(), Player2 = hand.alnHand2.size();
+            int Player1 = hand.alnHand1.size(), Player2 = hand.alnHand2.size(); //Initialize two ints
             int CardP1, CardP2;
             nCount--;
             CardP1 = lblCards.DrawCard(hand.alnHand1, nCount);
