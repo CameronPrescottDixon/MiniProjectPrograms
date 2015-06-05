@@ -7,7 +7,7 @@ public class Hand {
     ArrayList<Integer> alnHand1 = new ArrayList<Integer>();//ArrayList of all of Player 1's shuffled cards
     ArrayList<Integer> alnHand2 = new ArrayList<Integer>();//ArrayList of all of Player 2's shuffled cards
 
-    public void Cards() {
+    public void ShuffleCards() {
         for (int i = 0; i < 52; i++) {//Loop 52 times for 52 cards
             int nRand = (int) (Math.random() * 52); //Set a random integer between 1 and 51, the number of cards in a deck
             alnCards.add(nRand); //Add that card value to the ArrayList of all cards.
