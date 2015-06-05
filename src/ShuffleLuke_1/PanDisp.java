@@ -25,7 +25,7 @@ public class PanDisp extends JPanel {
 
         lblCards.StartingCard();
         lblCards2.StartingCard();
-        hand.Cards();
+        hand.ShuffleCards();
         hand.Hand1();
         hand.Hand2();
 
