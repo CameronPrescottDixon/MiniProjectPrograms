@@ -1,4 +1,4 @@
-package ReleaseSixShuffle;
+package FinalReleaseSixShuffle;
 
 import javax.swing.*;
 
