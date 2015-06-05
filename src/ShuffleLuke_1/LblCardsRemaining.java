@@ -11,7 +11,5 @@ public class LblCardsRemaining extends JLabel {
         String sRemain;
         sRemain = Integer.toString(nPlayer);
         LblRemaining.setText(sRemain); //Set the text of the label as how many cards are remaining in a player's deck
-
     }
-
 }
