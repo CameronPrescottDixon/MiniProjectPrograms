@@ -14,11 +14,16 @@ public class Hand {
         for (int i = 0; i < 52; i++) {
             alnCards.add(i);
         }
+        System.out.println(alnCards);
+        System.out.println(alnCards.size());
         for (int i = 0; i < alnCards.size(); i++) {
-            nRand = (int) (Math.random() * alnCards.size());
+            nRand = (int) (Math.random() * (alnCards.size()-1));
             alnShuffle.add((Integer) alnCards.get(nRand));
             alnCards.remove(nRand);
+            System.out.println("i is " + i + " and nRand is " + nRand + " size is "+ alnCards.size());
+            
         }
+        System.out.println(alnShuffle);
     }
 
     public ArrayList<Integer> Hand1() {
