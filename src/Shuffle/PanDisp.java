@@ -7,23 +7,25 @@ import java.awt.event.ActionListener;
 
 public class PanDisp extends JPanel {
 
-    BtnCards btnCards = new BtnCards();
-    BtnCards btnCards2 = new BtnCards();
+    LblCards lblCards = new LblCards();
+    LblCards lblCards2 = new LblCards();
+    
 
     public PanDisp(PanOut _panOut) {
         setLayout(new BorderLayout());
         BtnDraw draw = new BtnDraw("Draw!!!");
-        add(btnCards, BorderLayout.WEST);
-        add(btnCards2, BorderLayout.EAST);
+        add(lblCards, BorderLayout.WEST);
+        add(lblCards2, BorderLayout.EAST);
         add(draw, BorderLayout.SOUTH);
-        btnCards.StartingCard();
-        btnCards2.StartingCard();
+        lblCards.StartingCard();
+        lblCards2.StartingCard();
         evtDraw eD = new evtDraw(); // the event class will be defined later
         draw.addActionListener(eD);
     }
 
     public class evtDraw implements ActionListener { // must override the ActionPerformed method
 
+        @Override
         public void actionPerformed(ActionEvent e) {
         }
     }

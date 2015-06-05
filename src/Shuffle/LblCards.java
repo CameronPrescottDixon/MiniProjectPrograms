@@ -2,7 +2,7 @@ package Shuffle;
 
 import javax.swing.*;
 
-public class BtnCards extends JButton {
+public class LblCards extends JLabel {
 
     private ImageIcon icon;
 
