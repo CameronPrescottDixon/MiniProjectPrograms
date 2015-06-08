@@ -16,7 +16,7 @@ public class Hand {
         }
         System.out.println(alnCards);
         System.out.println(alnCards.size());
-        for (int i = 0; i < alnCards.size(); i++) {
+        for (int i = 0; i < 52; i++) {
             nRand = (int) (Math.random() * (alnCards.size()-1));
             alnShuffle.add((Integer) alnCards.get(nRand));
             alnCards.remove(nRand);
